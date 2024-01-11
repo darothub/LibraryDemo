@@ -45,6 +45,10 @@ public class Book {
         this.returnDate = returnDate;
     }
 
+    public void setUser(User user) {
+        this.user = user;
+    }
+
     public User getUser() {
         return user;
     }
@@ -53,13 +57,15 @@ public class Book {
         return returnDate != null;
     }
 
-    public Book(long id, String title, String author, LocalDate returnDate) {
-        this.id = id;
+    public Book(String title, String author, LocalDate returnDate) {
         this.title = title;
         this.author = author;
         this.returnDate = returnDate;
     }
 
+    public boolean isLateReturned(LocalDate dateReturned) {
+        return this.returnDate.isBefore(dateReturned);
+    }
     public Book() {
     }
 }

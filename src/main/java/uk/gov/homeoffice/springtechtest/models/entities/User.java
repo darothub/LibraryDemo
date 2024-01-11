@@ -44,4 +44,7 @@ public class User {
     public List<Book> getBooks() {
         return books;
     }
+    public void setBooks(List<Book> books){
+        this.books = books;
+    }
 }
