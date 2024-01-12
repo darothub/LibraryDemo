@@ -16,7 +16,9 @@ public class UserPayload {
     public UserPayload(String name) {
         this.name = name;
     }
+    public UserPayload() {
 
+    }
     public String getName() {
         return name;
     }
